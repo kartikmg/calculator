@@ -28,6 +28,7 @@ double calcu(char op,double N1,double N2)
             break;
             }
          default:
+
             printf("Error! operator is not correct");
     }
 //printf("%f",result);
