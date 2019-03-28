@@ -1,27 +1,35 @@
-int calcu(char operator,double firstNumber,double secondNumber)
+#include"calci.h"
+double calcu(char op,double N1,double N2)
 {
-    switch(operator)
+ double result;
+    switch(op)
     {
         case '+':
-            printf("%.1lf + %.1lf = %.1lf",firstNumber, secondNumber, firstNumber + secondNumber);
+            result=N1+N2;
             break;
 
         case '-':
-            printf("%.1lf - %.1lf = %.1lf",firstNumber, secondNumber, firstNumber - secondNumber);
+            result=N1-N2;
             break;
 
         case '*':
-            printf("%.1lf * %.1lf = %.1lf",firstNumber, secondNumber, firstNumber * secondNumber);
+            result=N1*N2;
             break;
 
         case '/':
-            printf("%.1lf / %.1lf = %.1lf",firstNumber, secondNumber, firstNumber / secondNumber);
+            if (N2==0)
+            {
+             printf("invalid input");
+              break;
+            }
+            else
+            {
+                result=N1/N2;
             break;
-
-        // operator doesn't match any case constant (+, -, *, /)
-        default:
+            }
+         default:
             printf("Error! operator is not correct");
     }
-
-    return 0;
+//printf("%f",result);
+    return result;
 }
