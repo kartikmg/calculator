@@ -1,1 +1,2 @@
-int calcu(char,double,double)
+#include<stdio.h>
+double calcu(char ,double ,double);
